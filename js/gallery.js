@@ -72,7 +72,7 @@ const markup = images.map((image) => `
   <li class="gallery-item">
     <a class="gallery-link" href="large-image.jpg">
       <img
-        class="gallery-image" src= ${image.preview} data-source= ${image.original} alt= ${image.description}/>
+        class="gallery-image" src="${image.preview}" data-source="${image.original}" alt= "${image.description}"/>
     </a>
   </li>`).join('');
 
@@ -82,7 +82,7 @@ gallery.addEventListener('click', (event) => {
   event.preventDefault()
   if (event.target.classList.contains('gallery-image')) {
     const linkForImg = event.target.getAttribute('data-source');
-    const instance = basicLightbox.create(`<img src=${linkForImg} width="1112" height="640">`)
+    const instance = basicLightbox.create(`<img src="${linkForImg}" width="1112" height="640">`)
     instance.show()
   }
 })
